@@ -1,0 +1,36 @@
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 40%;
+  padding: 0;
+  margin: 1%;
+  margin-left: 55%;
+  -webkit-box-shadow: 10px 10px 10px #c1c1c1;
+  -moz-box-shadow: 10px 10px 10px #c1c1c1;
+  box-shadow: 10px 10px 10px #c1c1c1;
+  outline: 1px solid #7d95cc;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}

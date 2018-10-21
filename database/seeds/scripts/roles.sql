@@ -1,0 +1,4 @@
+INSERT INTO roles (id, name, display_name, description, created_at, updated_at) VALUES (1, 'admin', 'Administrador', 'Pro', '2017-05-22 04:00:00', '2017-06-17 21:55:34');
+INSERT INTO roles (id, name, display_name, description, created_at, updated_at) VALUES (2, 'dac', 'DAC', NULL, '2017-05-30 22:34:17', '2017-05-30 22:34:17');
+INSERT INTO roles (id, name, display_name, description, created_at, updated_at) VALUES (3, 'resp', 'Responsable', NULL, '2017-05-30 22:34:32', '2017-05-30 22:34:32');
+INSERT INTO roles (id, name, display_name, description, created_at, updated_at) VALUES (4, 'uss', 'Usuario', NULL, '2017-05-30 22:34:43', '2017-05-30 22:34:43');
