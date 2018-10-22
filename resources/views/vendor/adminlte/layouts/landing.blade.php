@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="">Inicio</a>
+              <a class="nav-link" href="{{ url('/inicio') }}">Inicio</a>
             </li>
             @if (Auth::guest())
             <li class="nav-item">

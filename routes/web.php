@@ -60,7 +60,10 @@ Route::prefix('revisor')->group(function() {
 });
 
 
-//Route::prefix()
+Route::prefix('inicio')->group(function(){
+	Route::get('/inicio','principal@PublicarAnuncioAceptado');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
