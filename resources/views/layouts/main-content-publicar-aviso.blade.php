@@ -15,41 +15,33 @@
 		    	<div class="col-md-12">
 		      		<div class="form-group">
 		        		<label>Región</label>
-		        		<select id="region" name="region" class="form-control select2" style="width: 100%;">
+		        		<select id="region" name="region" class="form-control select2" style="width: 100%;" onchange="populate('region', 'comuna')">
 				            <option value="" disabled selected>Elija una region</option>
-				            <option value="13">RM Region Metropolitana</option>
-				          	<option value="15">XV Arica y Parinacota</option>
-				          	<option value="1">I Taparacá</option>
-				          	<option value="2">II Antofagasta</option>
-				          	<option value="3">III Atacama</option>
-				          	<option value="4">IV Coquimbo</option>
-				          	<option value="5">V Vaparaíso</option>
-				          	<option value="6">VI O'Higgins</option>
-				          	<option value="7">VII Maule</option>
-				          	<option value="16">XVI Ñuble</option>
-				          	<option value="8">VIII Biobío</option>
-				          	<option value="9">IX Araucanía</option>
-				          	<option value="14">XIV Los Ríos</option>
-				          	<option value="10">X Los Lagos</option>
-				          	<option value="11">XI Aisén</option>
-				          	<option value="12">XII Magallanes y de la Antártica Chilena</option>
+				            <option value="7">RM Region Metropolitana</option>
+				          	<option value="1">XV Arica y Parinacota</option>
+				          	<option value="2">I Taparacá</option>
+				          	<option value="3">II Antofagasta</option>
+				          	<option value="4">III Atacama</option>
+				          	<option value="5">IV Coquimbo</option>
+				          	<option value="6">V Vaparaíso</option>
+				          	<option value="8">VI O'Higgins</option>
+				          	<option value="9">VII Maule</option>
+				          	<option value="10">VIII Biobío</option>
+				          	<option value="11">IX Araucanía</option>
+				          	<option value="12">XIV Los Ríos</option>
+				          	<option value="13">X Los Lagos</option>
+				          	<option value="14">XI Aisén</option>
+				          	<option value="15">XII Magallanes y de la Antártica Chilena</option>
 				        </select>
 		      		</div>
 		    	</div>
 		  	</div>
 		  	<div class="row">
 		    	<div class="col-md-12">
-		      		<div class="form-group">
-		        		<label>Comuna</label>
-		        		<select name="comuna" id="comuna" class="form-control select2" style="width: 100%;">
-				            <option value="" disabled selected>Elija una comuna</option>
-				          	<option value="Providencia">Providencia</option>
-				          	<option value="1">Reparacion a domicilio</option>
-				          	<option value="2">Vulcanizacion</option>
-				          	<option value="3">Fletes</option>
-				          	<option value="4">Electrodomesticos</option>
-				          	<option value="5">Limpieza</option>
-				        </select>
+		      		<div id="selectcomuna">
+		        		
+		        	            
+				        
 		      		</div>
 		    	</div>
 		  	</div>
@@ -132,3 +124,29 @@
     </div>
   </div>
 </div>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$('#region').val(9);
+		recargarLista();
+
+		$('#region').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"data.php",
+			data:"regiones=" + $('#region').val(),
+			success:function(r){
+				$('#selectcomuna').html(r);
+			}
+		});
+	}
+</script>
