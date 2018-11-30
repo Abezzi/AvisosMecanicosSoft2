@@ -50,20 +50,20 @@
     <div class="container" align="center"  >
     <form action="/my-handling-form-page" method="post">
     <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" />
+        <label for="name">Tipo de sugerencia</label>
+        <input type="text" id="comentario" name="comentario" />
     </div>
     <div>
         <label for="mail">E-mail:</label>
         <input type="email" id="mail" name="user_email" />
     </div>
     <div>
-        <label for="msg">Message:</label>
+        <label for="msg">Sugenerencia</label>
         <textarea id="msg" name="user_message"></textarea>
     </div>
     
     <div class="button">
-        <button type="submit">Send your message</button>
+        <button type="submit">Enviar</button>
     </div>
 </form>
  
