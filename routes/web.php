@@ -61,9 +61,11 @@ Route::prefix('revisor')->group(function() {
 
 
 Route::prefix('inicio')->group(function(){
-	Route::get('/inicio','principal@PublicarAnuncioAceptado');
+	Route::get('/inicio','principalController@PublicarAnuncioAceptado');
+	//Route::post('/inicio',)
 });
 
+Route::get('/sugerencias','sugerenciasController@showForm')
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
