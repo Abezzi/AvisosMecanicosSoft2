@@ -14,7 +14,6 @@
     <div align="center">
 
     <embed src="{{ asset('storage/upload/ayuda.pdf') }}" style="border:rgba(6,92,0,0.3) solid 2px; width:100%" height="1000" />
-    
     </div>
                   
 

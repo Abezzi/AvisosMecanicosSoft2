@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/inicio') }}">Inicio</a>
+              <a class="nav-link" href="{{ url('/') }}">Inicio</a>
             </li>
             @if (Auth::guest())
             <li class="nav-item">
@@ -119,6 +119,7 @@
                 <a href="#">{{$frees->titulo}}</a>
               </h4>
               <p class="card-text">{{$frees->descripcion}}</p>
+              <p class="card-text">{{$frees->precio}}</p>
             </div>
           </div>
         </div>

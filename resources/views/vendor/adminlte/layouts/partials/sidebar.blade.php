@@ -74,9 +74,8 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/cliente/anuncios/publicar') }}">{{ trans('Publicar Anuncio') }}</a></li>
                     <li><a href="{{ url('/cliente/anuncios/ver') }}">{{ trans('Mis Anuncios') }}</a></li>
-                    <li><a href="{{ url('/cliente/anuncios/ver') }}">{{ trans('Ver Likes') }}</a></li>
-        
-                </ul>
+                    <li><a href="{{ url('/cliente/anuncios/like') }}">{{ trans('Ver Likes') }}</a></li>
+               </ul>
             </li>
             @endif
 
@@ -86,6 +85,15 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/revisor/anuncios/ver') }}">{{ trans('Revisar Anuncios') }}</a></li>       
                 </ul>
+            </li>
+            @endif
+
+             @if ( $user->role  == "1" || $user->role  == "3")
+            <li class="treeview">
+                <a href="#"><i class='fa fa-address-book'></i> <span>{{ trans('Sugerencias') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/cliente/anuncios/sugerencia') }}">{{ trans('Realizar sugerencia') }}</a></li>
+               </ul>
             </li>
             @endif
 

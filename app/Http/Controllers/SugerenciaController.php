@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 use App\User;
@@ -10,9 +11,14 @@ use App\categoria;
 use App\imagen;
 
 
-class principal extends Controller
+/**
+ * Class HomeController
+ * @package App\Http\Controllers
+ */
+
+class SugerenciaController extends Controller
 {
-	/**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -27,10 +33,7 @@ class principal extends Controller
      *
      * @return Response
      */
-     public function PublicarAnuncioAceptado(){
-
-        $anuncio = anuncio::where('estado', '=', 'PUBLICADO')->paginate(6);
-        return view('cliente.inicio-anuncio',compact('categoria'));
+    public function VerSugerencias(){
+        return view('cliente.sugerencia-anuncio');
     }
-
-}
+  }

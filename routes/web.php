@@ -50,6 +50,8 @@ Route::prefix('cliente')->group(function() {
 	Route::get('/anuncios/publicar','AnunciosController@PublicarAnuncios')->name('cliente.publicar-anuncio');
 	Route::post('/anuncios/publicar','AnunciosController@PostPublicarAnuncios')->name('cliente.publicar-anuncio.submit');
 	Route::get('/anuncios/ver','AnunciosController@VerAnuncios')->name('cliente.ver-anuncio');
+	Route::get('/anuncios/like','AnunciosController@Verlike')->name('cliente.like-anuncio');
+	Route::get('/anuncios/sugerencia','SugerenciaController@VerSugerencias')->name('cliente.sugerencia-anuncios');
 });
 
 Route::prefix('revisor')->group(function() {
@@ -60,12 +62,7 @@ Route::prefix('revisor')->group(function() {
 });
 
 
-Route::prefix('inicio')->group(function(){
-	Route::get('/inicio','principalController@PublicarAnuncioAceptado');
-	//Route::post('/inicio',)
-});
 
-Route::get('/sugerencias','sugerenciasController@showForm')
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware

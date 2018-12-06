@@ -15,7 +15,8 @@
 	<div class="container-fluid spark-screen">
 		<div class="row">
 			<div class="col-md-12 col-md-offset-2">
-
+							<h1>Bienvenido<h1>
+							<h2>Publica tus anuncios con nosotros<h2>
 				<!-- Default box -->
                     <div class="col-lg-8 col-lg-offset-2">
                         <div id="carousel-example-generic" class="carousel slide">

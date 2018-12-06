@@ -95,6 +95,11 @@ class AnunciosController extends Controller
 
         return redirect('revisor/anuncios/ver');
     }
+    
+    public function VerLike(){
+        return view('cliente.like-anuncio');
+    }
+    
 
 /*
     public function ContarAnuncios($region){
